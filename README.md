@@ -135,15 +135,7 @@ flask-weather-app/
 - Docker containerization & Gunicorn deployment
 - Clean, modular project structure
 
----
 
-## 📈 Future Improvements
-
-- [ ] 5-Day Weather Forecast
-- [ ] Geolocation-based auto-detection
-- [ ] Weather history charts
-- [ ] CI/CD with GitHub Actions
-- [ ] Deploy to Railway / Render
 
 ---
 
