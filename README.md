@@ -1,86 +1,161 @@
-## 🌦️ Flask Weather Web Application
+# 🌦️ Flask Weather Web Application
+
+A **Dockerized** Flask-based weather forecasting web app that fetches **real-time weather data** using the OpenWeather API and runs with **Gunicorn** for production-ready deployment.
+
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Flask](https://img.shields.io/badge/Flask-2.x-green)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+---
+
 ## 📌 Project Overview
-Flask Weather App is a web-based weather forecasting application built using Flask (Python backend) that fetches real-time weather data from an external API and displays it in a user-friendly interface.
 
-The application demonstrates:
-1. REST API integration
-2. Backend request handling
-3. Form data processing
-4. Dynamic template rendering
-5. Error handling
-6. Environment variable security
+This project demonstrates backend web development skills including REST API integration, Docker containerization, and production deployment with Gunicorn. Users can search for any city worldwide and instantly get live weather conditions.
 
-This project showcases backend development skills and API integration knowledge.
+---
 
-## 🚀 Key Features
-## 🌍 Real-Time Weather Data
-1. Fetches live weather using external Weather API
-2. Displays:
-    1. Temperature
-    2. Humidity
-    3. Weather condition
-    4. Wind speed
-    5. Location details
+## ✨ Features
 
-## 🔎 City-Based Search
-1. User can enter:
-    1. City
-    2. State (optional)
-    3. Country
-2. Dynamic result rendering using Flask templates
+- 🌍 **Real-Time Weather Data** — Live temperature, humidity, wind speed, and conditions
+- 🔎 **City-Based Search** — Search by city, state (optional), and country
+- ⚠️ **Error Handling** — Invalid city names, API failures handled gracefully
+- 🔐 **Secure Configuration** — API keys stored in `.env` using `python-dotenv`
+- 🐳 **Docker Support** — Fully containerized for easy deployment
+- 🚀 **Production Ready** — Runs with Gunicorn WSGI server
 
-## ⚠️ Error Handling
-1. Handles invalid city names
-2. Displays user-friendly error messages
-3. API failure handling
-
-## 🔐 Secure Configuration
-1. API keys stored in .env
-2. Uses python-dotenv
-3. No hardcoded secrets
+---
 
 ## 🛠️ Tech Stack
-## 🔹 Backend
-1. Python 3.13
-2. Flask
-3. Requests
-3. Dotenv
 
-## 🔹 Frontend
-1. HTML
-2. CSS
-3. Bootstrap
-4. JS
+| Layer | Technology |
+|---|---|
+| **Backend** | Python 3.13, Flask |
+| **API** | OpenWeather API |
+| **Frontend** | HTML5, CSS3, Bootstrap, JavaScript |
+| **Templating** | Jinja2 |
+| **Deployment** | Docker, Gunicorn |
+| **Security** | python-dotenv (.env) |
+| **Tools** | Git, GitHub, VS Code, venv |
 
-## 🔹 Tools
-1. VS Code
-2. Git & GitHub
-3. Virtual Environment (venv)
-4. Docker
+---
 
 ## ⚙️ How It Works
-1️. User enters city in form
-2️. Flask receives POST request
-3️. Backend calls weather API using requests
-4️. JSON response parsed
-5️. Data passed to template
-6️. Weather displayed dynamically
 
-## 🌐 API Integration
-1. Used external Weather API
-2. Handled JSON parsing
-3. Managed HTTP status codes
-4. Implemented API error handling
+```
+User enters city → Flask receives POST request
+→ Backend calls OpenWeather API
+→ JSON response parsed
+→ Weather data passed to Jinja2 template
+→ Results displayed dynamically
+```
 
-## 🧠 What This Project Demonstrates (HR Perspective)
-1. Flask routing & request handling
-2. API integration experience
-3. JSON parsing & data handling
-4. Template rendering (Jinja2)
-5. Environment variable security
-6. Clean project structure
-7. Git usage
+---
 
-## Run
+## 🚀 Installation & Setup
+
+### Option 1 — Run with Docker (Recommended)
+
+```bash
+# Clone the repository
+git clone https://github.com/6355492210/flask-weather-app.git
+cd flask-weather-app
+
+# Create .env file
+echo "API_KEY=your_openweather_api_key" > .env
+
+# Build and run Docker container
 docker build -t flask-weather-app .
 docker run -p 5000:5000 flask-weather-app
+```
+
+Visit: `http://localhost:5000`
+
+---
+
+### Option 2 — Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/6355492210/flask-weather-app.git
+cd flask-weather-app
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate       # Linux/Mac
+venv\Scripts\activate          # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Create .env file and add your API key
+echo "API_KEY=your_openweather_api_key" > .env
+
+# Run the app
+python app.py
+```
+
+---
+
+## 🔑 Get API Key
+
+1. Go to [openweathermap.org](https://openweathermap.org/api)
+2. Sign up for a free account
+3. Copy your API key
+4. Add it to `.env` file
+
+---
+
+## 📁 Project Structure
+
+```
+flask-weather-app/
+│
+├── templates/
+│   └── index.html          # Main HTML Template
+│
+├── app.py                  # Flask App & Routes
+├── weather.py              # API Integration Logic
+├── requirements.txt        # Python Dependencies
+├── Dockerfile              # Docker Configuration
+├── .dockerignore
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🧠 What This Project Demonstrates
+
+- Flask routing & HTTP request handling (GET/POST)
+- External REST API integration (OpenWeather)
+- JSON response parsing & data extraction
+- Jinja2 template rendering with dynamic data
+- Environment variable security with `.env`
+- Docker containerization & Gunicorn deployment
+- Clean, modular project structure
+
+---
+
+## 📈 Future Improvements
+
+- [ ] 5-Day Weather Forecast
+- [ ] Geolocation-based auto-detection
+- [ ] Weather history charts
+- [ ] CI/CD with GitHub Actions
+- [ ] Deploy to Railway / Render
+
+---
+
+## 👨‍💻 Author
+
+**Vivek Vaghela**
+- GitHub: [@6355492210](https://github.com/6355492210)
+- LinkedIn: [linkedin.com/in/vaghelavivekm](https://www.linkedin.com/in/vaghelavivekm)
+- Location: Rajkot, Gujarat
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
