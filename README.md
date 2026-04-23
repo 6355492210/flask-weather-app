@@ -141,7 +141,7 @@ flask-weather-app/
 
 ## 👨‍💻 Author
 
-**Vivek Vaghela | Python Backend Developer**
+**Vivek Vaghela | Fresher Python Backend Developer**
 - GitHub: [@6355492210](https://github.com/6355492210)
 - LinkedIn: [linkedin.com/in/vaghelavivekm](https://www.linkedin.com/in/vaghelavivekm)
 - Location: Rajkot, Gujarat
